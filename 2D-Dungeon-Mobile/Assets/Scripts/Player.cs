@@ -9,12 +9,10 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float _jumpForce = 5.0f;
- 
     [SerializeField]
-    private LayerMask _groundLayer;
+    private float _speed = 5.0f;
 
     private bool _resetJump = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +31,10 @@ public class Player : MonoBehaviour
     void Movement()
     {
         //horizontal input for left/right
-        float horizontalInput = Input.GetAxisRaw("Horizontal");    
+        float move = Input.GetAxisRaw("Horizontal");    
 
         //current velocity  = new vecotr3(horizontal input, current velocity) --> walk
-        _rigid.velocity = new Vector2(horizontalInput, _rigid.velocity.y);
+        _rigid.velocity = new Vector2(move * _speed, _rigid.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -51,6 +49,7 @@ public class Player : MonoBehaviour
 
     bool IsGrounded()
     {
+        //1 << 8 is the layer of the ground
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 1 << 8);
 
         if (hitInfo.collider != null)
