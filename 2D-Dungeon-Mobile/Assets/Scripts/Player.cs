@@ -14,11 +14,17 @@ public class Player : MonoBehaviour
 
     private bool _resetJump = false;
 
+    //handle to animation controller
+    private PlayerAnimation _anim;
+
     // Start is called before the first frame update
     void Start()
     {
         //assign handle rigidbody
         _rigid = GetComponent<Rigidbody2D>();
+        //assign handle animation controller
+        _anim = GetComponent<PlayerAnimation>();
+
     }
 
     // Update is called once per frame
@@ -35,6 +41,8 @@ public class Player : MonoBehaviour
 
         //current velocity  = new vecotr3(horizontal input, current velocity) --> walk
         _rigid.velocity = new Vector2(move * _speed, _rigid.velocity.y);
+
+        _anim.Move(move);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
