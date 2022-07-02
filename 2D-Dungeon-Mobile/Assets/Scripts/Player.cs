@@ -13,9 +13,10 @@ public class Player : MonoBehaviour
     private float _speed = 5.0f;
 
     private bool _resetJump = false;
+    private bool _grounded = false;
 
     //handle to animation controller
-    private PlayerAnimation _anim;
+    private PlayerAnimation _playerAnim;
     private SpriteRenderer _sprite;
 
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour
         //assign handle rigidbody
         _rigid = GetComponent<Rigidbody2D>();
         //assign handle animation controller
-        _anim = GetComponent<PlayerAnimation>();
+        _playerAnim = GetComponent<PlayerAnimation>();
         _sprite = GetComponentInChildren<SpriteRenderer>();
 
     }
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
     {
         //horizontal input for left/right
         float move = Input.GetAxisRaw("Horizontal");    
+        _grounded = IsGrounded();
 
         //flip sprite
         if (move > 0)
@@ -60,11 +62,12 @@ public class Player : MonoBehaviour
             Debug.Log("Jump!");
 
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
-
+            //tell animator to jump
+            _playerAnim.Jump(true);
             StartCoroutine(ResetJumpRoutine());
         }
 
-        _anim.Move(move);
+        _playerAnim.Move(move);
 
     }
 
@@ -75,8 +78,11 @@ public class Player : MonoBehaviour
 
         if (hitInfo.collider != null)
         {
+            Debug.Log("Grounded");
             if (_resetJump == false)
                 return true;
+            //set jump animator bool to false
+            _playerAnim.Jump(false);
         }
         return false;
     }

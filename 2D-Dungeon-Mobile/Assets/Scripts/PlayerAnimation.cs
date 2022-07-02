@@ -17,4 +17,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         _anim.SetFloat("Move", Mathf.Abs(move)); // get the absolute value 
     }
+
+    public void Jump(bool jumping)
+    {
+        _anim.SetBool("Jumping", jumping);
+    }
 }
