@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     //handle to animation controller
     private PlayerAnimation _playerAnim;
     private SpriteRenderer _sprite;
+    private SpriteRenderer _swordArcSpirte;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,8 @@ public class Player : MonoBehaviour
         //assign handle animation controller
         _playerAnim = GetComponent<PlayerAnimation>();
         _sprite = GetComponentInChildren<SpriteRenderer>();
+        // get the second child of the player object
+        _swordArcSpirte = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
     }
 
@@ -46,12 +50,11 @@ public class Player : MonoBehaviour
         //flip sprite
         if (move > 0)
         {
-            _sprite.flipX = false;
-
+            Flip(true);
         }
         else if (move < 0)
         {
-            _sprite.flipX = true;
+            Flip(false);
         }
 
         //current velocity  = new vecotr3(horizontal input, current velocity) --> walk
@@ -97,6 +100,32 @@ public class Player : MonoBehaviour
             
         }
         return false;
+    }
+
+    void Flip(bool faceRight)
+    {
+        if (faceRight == true)
+        {
+            _sprite.flipX = false;
+
+            _swordArcSpirte.flipX = false;
+            _swordArcSpirte.flipY = false;
+
+            Vector3 newPos = _swordArcSpirte.transform.localPosition;
+            newPos.x = 0.49f;
+            _swordArcSpirte.transform.localPosition = newPos; 
+        }
+        else if (faceRight == false)
+        {
+            _sprite.flipX = true;
+
+            _swordArcSpirte.flipX = true;
+            _swordArcSpirte.flipY = true;
+
+            Vector3 newPos = _swordArcSpirte.transform.localPosition;
+            newPos.x = -0.49f;
+            _swordArcSpirte.transform.localPosition = newPos; 
+        }
     }
 
     IEnumerator ResetJumpRoutine()
