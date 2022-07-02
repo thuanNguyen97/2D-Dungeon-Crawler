@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
-        
+        Attack();
     }
 
     void Movement()
@@ -59,30 +59,42 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
+            _playerAnim.Jump(true);
             Debug.Log("Jump!");
 
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             //tell animator to jump
-            _playerAnim.Jump(true);
+            
             StartCoroutine(ResetJumpRoutine());
+            
         }
 
         _playerAnim.Move(move);
 
     }
 
+    void Attack()
+    {
+        if(Input.GetMouseButtonDown(0) && IsGrounded() == true)
+        {
+            _playerAnim.Attack();
+        }
+    }
+
     bool IsGrounded()
     {
         //1 << 8 is the layer of the ground
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 1 << 8);
+        Debug.DrawRay(transform.position, Vector2.down, Color.green);
 
         if (hitInfo.collider != null)
         {
             Debug.Log("Grounded");
-            if (_resetJump == false)
-                return true;
             //set jump animator bool to false
             _playerAnim.Jump(false);
+            if (_resetJump == false)
+                return true;
+            
         }
         return false;
     }
