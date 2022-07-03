@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
     private float _jumpForce = 5.0f;
     [SerializeField]
     private float _speed = 5.0f;
+    [SerializeField]
+    private LayerMask _groundedLayer;
+    [SerializeField]
+    private bool _isGrounded;
 
     private bool _resetJump = false;
     private bool _grounded = false;
@@ -87,8 +91,8 @@ public class Player : MonoBehaviour
     bool IsGrounded()
     {
         //1 << 8 is the layer of the ground
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 1 << 8);
-        Debug.DrawRay(transform.position, Vector2.down, Color.green);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.8f, _groundedLayer.value);
+        Debug.DrawRay(transform.position, Vector2.down * 0.8f, Color.green);
 
         if (hitInfo.collider != null)
         {
@@ -97,8 +101,10 @@ public class Player : MonoBehaviour
             _playerAnim.Jump(false);
             if (_resetJump == false)
                 return true;
+            _isGrounded = true;
             
         }
+        _isGrounded = false;
         return false;
     }
 

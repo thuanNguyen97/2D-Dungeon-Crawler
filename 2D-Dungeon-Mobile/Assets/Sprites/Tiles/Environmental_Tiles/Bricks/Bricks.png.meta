@@ -1554,7 +1554,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bricks_2: 21300004
+      Bricks_55: 21300110
       Bricks_8: 21300016
       Bricks_22: 21300044
       Bricks_31: 21300062
@@ -1586,8 +1586,8 @@ TextureImporter:
       Bricks_37: 21300074
       Bricks_56: 21300112
       Bricks_25: 21300050
-      Bricks_51: 21300102
       Bricks_44: 21300088
+      Bricks_51: 21300102
       Bricks_28: 21300056
       Bricks_34: 21300068
       Bricks_29: 21300058
@@ -1612,7 +1612,7 @@ TextureImporter:
       Bricks_11: 21300022
       Bricks_12: 21300024
       Bricks_53: 21300106
-      Bricks_55: 21300110
+      Bricks_2: 21300004
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
