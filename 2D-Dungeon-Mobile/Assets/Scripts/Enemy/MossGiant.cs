@@ -5,11 +5,13 @@ using UnityEngine;
 public class MossGiant : Enemy
 {
     private Vector3 _currentTarget;
-    private Animator _anim; 
+    private Animator _anim;
+    private SpriteRenderer _sprite; 
 
     private void Start() 
     {
         _anim = GetComponentInChildren<Animator>();
+        _sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     public override void Update()
@@ -26,6 +28,16 @@ public class MossGiant : Enemy
 
     void Movement()
     {
+        //flip sprite
+        if (_currentTarget == pointA.position)
+        {
+            _sprite.flipX = true;
+        }
+        else 
+        {
+            _sprite.flipX = false;
+        }
+
         //if current pos == point A
         //move to pointB
         //else if current pos == point B
