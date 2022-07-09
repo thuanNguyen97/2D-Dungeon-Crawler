@@ -5,14 +5,22 @@ using UnityEngine;
 public class MossGiant : Enemy
 {
     private Vector3 _currentTarget;
+    private Animator _anim; 
 
     private void Start() 
     {
-        
+        _anim = GetComponentInChildren<Animator>();
     }
 
     public override void Update()
     {
+        //if idle animation
+        //do nothing
+        if (_anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            return;
+        }
+
         Movement();
     }
 
