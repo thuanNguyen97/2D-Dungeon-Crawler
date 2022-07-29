@@ -20,6 +20,8 @@ public class Skeleton : Enemy, IDamageable
         //subtract 1 from health
         Health--;
 
+        anim.SetTrigger("Hit");
+
         //if health less than 1
         if (Health < 1)
         {
