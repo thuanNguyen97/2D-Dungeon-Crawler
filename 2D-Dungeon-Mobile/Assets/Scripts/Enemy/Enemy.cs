@@ -17,6 +17,8 @@ public abstract class Enemy : MonoBehaviour
     protected Animator anim;
     protected SpriteRenderer sprite;
 
+    protected bool isHit = false;
+
     public virtual void Init()
     {
         anim = GetComponentInChildren<Animator>();
@@ -70,7 +72,11 @@ public abstract class Enemy : MonoBehaviour
             
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+        if (isHit == false)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+        }
+        
     }
 
 }

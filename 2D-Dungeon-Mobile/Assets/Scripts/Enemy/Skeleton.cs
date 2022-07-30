@@ -22,6 +22,8 @@ public class Skeleton : Enemy, IDamageable
 
         anim.SetTrigger("Hit");
 
+        isHit = true;
+
         //if health less than 1
         if (Health < 1)
         {
