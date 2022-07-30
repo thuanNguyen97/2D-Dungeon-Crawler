@@ -72,7 +72,7 @@ public abstract class Enemy : MonoBehaviour
             
         }
 
-        if (isHit == false)
+        if (isHit == false) //if enemies get hit, freeze the animation
         {
             transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
         }
