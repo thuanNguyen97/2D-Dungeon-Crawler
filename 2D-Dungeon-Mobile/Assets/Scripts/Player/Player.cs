@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     //get handle to rigidbody
     private Rigidbody2D _rigid;
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     private PlayerAnimation _playerAnim;
     private SpriteRenderer _sprite;
     private SpriteRenderer _swordArcSpirte;
+
+    public int Health { get; set;}
 
 
     // Start is called before the first frame update
@@ -135,4 +137,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         _resetJump = false;
     }
+
+    public void Damage()
+    {
+        Debug.Log("Player::Damage()");
+    }    
 }
