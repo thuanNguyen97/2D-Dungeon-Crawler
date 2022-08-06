@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spider : Enemy, IDamageable
 {
+    public GameObject acidEffectPrefab;
+
     public int Health { get; set;}
 
     public override void Init()
@@ -19,5 +21,11 @@ public class Spider : Enemy, IDamageable
     public override void Movement()
     {
         //sit still
+    }
+
+    public void Attack()
+    {
+        //instantiate acid effect
+        Instantiate(acidEffectPrefab, transform.position, Quaternion.identity);
     }
 }
