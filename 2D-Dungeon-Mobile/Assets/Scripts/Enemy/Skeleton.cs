@@ -35,8 +35,11 @@ public class Skeleton : Enemy, IDamageable
         //if health less than 1
         if (Health < 1)
         {
+            isDead = true;
+            //play death animation
+            anim.SetTrigger("Death");
             //destroy
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }    
     }
 }
