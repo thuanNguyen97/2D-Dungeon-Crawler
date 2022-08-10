@@ -7,6 +7,9 @@ public class Player : MonoBehaviour, IDamageable
     //get handle to rigidbody
     private Rigidbody2D _rigid;
 
+    //variable for amount of diamond
+    public int diamonds;
+
     [SerializeField]
     private float _jumpForce = 5.0f;
     [SerializeField]

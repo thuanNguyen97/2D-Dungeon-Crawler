@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,6 +124,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -131,10 +143,10 @@ TextureImporter:
       name: Diamond_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 1792
-        width: 123
-        height: 119
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +164,10 @@ TextureImporter:
       name: Diamond_1
       rect:
         serializedVersion: 2
-        x: 130
+        x: 128
         y: 1792
-        width: 124
-        height: 118
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +185,10 @@ TextureImporter:
       name: Diamond_2
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 1664
-        width: 124
-        height: 117
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +206,10 @@ TextureImporter:
       name: Diamond_3
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 1664
-        width: 122
-        height: 117
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +227,10 @@ TextureImporter:
       name: Diamond_4
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 1536
-        width: 121
-        height: 117
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +248,10 @@ TextureImporter:
       name: Diamond_5
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 1536
-        width: 122
-        height: 116
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +269,10 @@ TextureImporter:
       name: Diamond_6
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 1408
-        width: 123
-        height: 116
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +290,10 @@ TextureImporter:
       name: Diamond_7
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 1408
-        width: 124
-        height: 116
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +311,10 @@ TextureImporter:
       name: Diamond_8
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1284
-        width: 122
-        height: 112
+        x: 0
+        y: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +332,10 @@ TextureImporter:
       name: Diamond_9
       rect:
         serializedVersion: 2
-        x: 133
-        y: 1285
-        width: 123
-        height: 111
+        x: 128
+        y: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +353,10 @@ TextureImporter:
       name: Diamond_10
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1156
-        width: 123
-        height: 113
+        x: 0
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +374,10 @@ TextureImporter:
       name: Diamond_11
       rect:
         serializedVersion: 2
-        x: 132
-        y: 1158
-        width: 124
-        height: 111
+        x: 128
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +395,10 @@ TextureImporter:
       name: Diamond_12
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1030
-        width: 124
-        height: 111
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +416,10 @@ TextureImporter:
       name: Diamond_13
       rect:
         serializedVersion: 2
-        x: 131
-        y: 1030
-        width: 124
-        height: 111
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +437,10 @@ TextureImporter:
       name: Diamond_14
       rect:
         serializedVersion: 2
-        x: 2
-        y: 902
-        width: 125
-        height: 110
+        x: 0
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,10 +458,10 @@ TextureImporter:
       name: Diamond_15
       rect:
         serializedVersion: 2
-        x: 130
-        y: 898
-        width: 125
-        height: 114
+        x: 128
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +479,10 @@ TextureImporter:
       name: Diamond_16
       rect:
         serializedVersion: 2
-        x: 2
-        y: 769
-        width: 125
-        height: 115
+        x: 0
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,10 +500,10 @@ TextureImporter:
       name: Diamond_17
       rect:
         serializedVersion: 2
-        x: 130
-        y: 769
-        width: 125
-        height: 115
+        x: 128
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +521,10 @@ TextureImporter:
       name: Diamond_18
       rect:
         serializedVersion: 2
-        x: 2
-        y: 641
-        width: 125
-        height: 115
+        x: 0
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,10 +542,10 @@ TextureImporter:
       name: Diamond_19
       rect:
         serializedVersion: 2
-        x: 130
-        y: 642
-        width: 126
-        height: 113
+        x: 128
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,10 +563,10 @@ TextureImporter:
       name: Diamond_20
       rect:
         serializedVersion: 2
-        x: 3
-        y: 516
-        width: 125
-        height: 112
+        x: 0
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,10 +584,10 @@ TextureImporter:
       name: Diamond_21
       rect:
         serializedVersion: 2
-        x: 131
-        y: 517
-        width: 124
-        height: 112
+        x: 128
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,10 +605,10 @@ TextureImporter:
       name: Diamond_22
       rect:
         serializedVersion: 2
-        x: 4
-        y: 392
-        width: 124
-        height: 109
+        x: 0
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,10 +626,10 @@ TextureImporter:
       name: Diamond_23
       rect:
         serializedVersion: 2
-        x: 132
-        y: 389
-        width: 124
-        height: 112
+        x: 128
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,10 +647,10 @@ TextureImporter:
       name: Diamond_24
       rect:
         serializedVersion: 2
-        x: 4
-        y: 259
-        width: 124
-        height: 114
+        x: 0
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,10 +668,10 @@ TextureImporter:
       name: Diamond_25
       rect:
         serializedVersion: 2
-        x: 131
-        y: 257
-        width: 125
-        height: 117
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,10 +689,10 @@ TextureImporter:
       name: Diamond_26
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 128
-        width: 125
-        height: 118
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -698,10 +710,10 @@ TextureImporter:
       name: Diamond_27
       rect:
         serializedVersion: 2
-        x: 130
-        y: 129
-        width: 122
-        height: 117
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +731,10 @@ TextureImporter:
       name: Diamond_28
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1
-        width: 120
-        height: 118
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,10 +752,10 @@ TextureImporter:
       name: Diamond_29
       rect:
         serializedVersion: 2
-        x: 130
+        x: 128
         y: 0
-        width: 123
-        height: 119
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
