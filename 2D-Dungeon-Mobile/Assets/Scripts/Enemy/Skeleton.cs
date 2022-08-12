@@ -40,6 +40,11 @@ public class Skeleton : Enemy, IDamageable
             anim.SetTrigger("Death");
             //destroy
             //Destroy(this.gameObject);
+
+            //spawn diamonds (casting)
+            GameObject diamond = Instantiate(diamondPrefab, transform.position, Quaternion.identity) as GameObject;
+            //change the value whatever my gem count is
+            diamond.GetComponent<Diamond>().gems = base.gems;
         }    
     }
 }
