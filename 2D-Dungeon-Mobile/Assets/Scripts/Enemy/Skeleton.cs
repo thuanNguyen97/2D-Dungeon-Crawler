@@ -20,6 +20,9 @@ public class Skeleton : Enemy, IDamageable
 
     public void Damage()
     {
+        if (isDead == true)
+            return;
+
         Debug.Log("Damage!");
 
         //subtract 1 from health
@@ -35,6 +38,8 @@ public class Skeleton : Enemy, IDamageable
         //if health less than 1
         if (Health < 1)
         {
+            
+
             isDead = true;
             //play death animation
             anim.SetTrigger("Death");
