@@ -10,7 +10,23 @@ public class Shop : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Player player = other.GetComponent<Player>();
+
+            if (player != null)
+            {
+                //send player diamond info to the UIManager
+                UIManager.Instance.OpenShop(player.diamonds);
+            }    
+
             shopPanel.SetActive(true);
+        }    
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            shopPanel.SetActive(false);
         }    
     }
 }
