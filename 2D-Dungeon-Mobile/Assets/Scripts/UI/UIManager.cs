@@ -20,11 +20,14 @@ public class UIManager : MonoBehaviour
     }
 
     public Text playerGemCountText;
+    public Image selectionImage;
 
     public void OpenShop(int gemCount)
     {
         playerGemCountText.text = "" + gemCount + " G";
     }    
+
+    
 
     private void Awake()
     {
