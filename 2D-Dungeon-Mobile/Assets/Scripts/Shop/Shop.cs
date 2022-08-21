@@ -30,8 +30,26 @@ public class Shop : MonoBehaviour
         }    
     }
 
-    public void SelectItem()
+    public void SelectItem(int item)
     {
-        Debug.Log("Item selected");
+        //0 = flame sword
+        //1 = boots of flight
+        //2 = key to castle
+
+        Debug.Log("Item selected" + item);
+
+        //switch between item
+        switch(item)
+        {
+            case 0: //flame sword
+                UIManager.Instance.UpdateShopSelection(55);
+                break;
+            case 1: //boots of flight
+                UIManager.Instance.UpdateShopSelection(-41);
+                break;
+            case 2: //key to the castle
+                UIManager.Instance.UpdateShopSelection(-125);
+                break;
+        }
     }
 }
