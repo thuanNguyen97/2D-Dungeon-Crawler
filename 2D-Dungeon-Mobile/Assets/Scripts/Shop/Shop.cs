@@ -52,4 +52,9 @@ public class Shop : MonoBehaviour
                 break;
         }
     }
+
+    //Buy item method
+    //check if player's gem is greater or equal to the item price
+    //if it is, then got the item. subtract cost from players gem
+    //else, cancel sale
 }
