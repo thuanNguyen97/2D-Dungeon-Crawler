@@ -73,6 +73,11 @@ public class Shop : MonoBehaviour
         if (_player.diamonds >= currentItemCost)
         {
             //award item
+            if (currentSelectedItem == 2)
+            {
+                GameManager.Instance.HasKeyToTheCastle = true;
+            }    
+
             //subtract money
             _player.diamonds -= currentItemCost;
 

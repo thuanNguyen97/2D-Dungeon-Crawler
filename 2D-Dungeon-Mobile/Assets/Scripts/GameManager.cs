@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool HasKeyToTheCastle { get; set; }  
+
     private void Awake()
     {
         _instance = this;
