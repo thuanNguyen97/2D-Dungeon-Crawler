@@ -9,7 +9,7 @@ public class Diamond : MonoBehaviour
     //add the value of diamond to player
 
 
-    public int gems = 1;
+    public int gems = 25;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,8 +19,11 @@ public class Diamond : MonoBehaviour
 
             if (player != null)
             {
+                //add gems with function
+                player.AddGem(gems);
+
                 //add diamond amount value to player
-                player.diamonds += gems;
+                //player.diamonds += gems;
 
                 Destroy(this.gameObject);
             }    

@@ -145,4 +145,11 @@ public class Player : MonoBehaviour, IDamageable
     {
         Debug.Log("Player::Damage()");
     }    
+
+    //update gem count
+    public void AddGem(int amount)
+    {
+        diamonds += amount;
+        UIManager.Instance.UpdateGemCount(diamonds);
+    }
 }
