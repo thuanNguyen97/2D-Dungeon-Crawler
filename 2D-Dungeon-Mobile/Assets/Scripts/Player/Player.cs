@@ -38,6 +38,8 @@ public class Player : MonoBehaviour, IDamageable
         // get the second child of the player object
         _swordArcSpirte = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
+        Health = 4;
+
     }
 
     // Update is called once per frame
@@ -143,7 +145,24 @@ public class Player : MonoBehaviour, IDamageable
 
     public void Damage()
     {
+        if (Health < 1)
+        {
+            return;
+        }
+
         Debug.Log("Player::Damage()");
+
+        //subtract 1 health
+        Health--;
+        //update UI
+        UIManager.Instance.UpdateLives(Health);
+        //check for death
+        //play death anim
+        if (Health < 1)
+        {
+            _playerAnim.Dead();
+        }
+
     }    
 
     //update gem count

@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
     public Image selectionImage;
     public Text gemCountText;
 
+    public Image[] healthBar;
+
     private void Awake()
     {
         _instance = this;
@@ -41,5 +43,22 @@ public class UIManager : MonoBehaviour
     public void UpdateGemCount(int count)
     {
         gemCountText.text = "" + count;
+    }
+
+    public void UpdateLives(int livesRemaining)
+    {
+        //loop through lives
+        //if i == livesRemaining
+        //hide that one 
+
+        for (int i = 0; i <= livesRemaining; i++)
+        {
+            //do nothing until we hit the max
+            if (i == livesRemaining)
+            {
+                //hide this one
+                healthBar[i].enabled = false;
+            }
+        }
     }
 }
