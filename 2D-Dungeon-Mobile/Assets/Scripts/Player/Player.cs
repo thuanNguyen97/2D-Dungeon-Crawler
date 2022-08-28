@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour, IDamageable
     void Movement()
     {
         //horizontal input for left/right
-        float move = Input.GetAxisRaw("Horizontal");    
+        float move = CrossPlatformInputManager.GetAxisRaw("Horizontal");  //crossplatform input  
         _grounded = IsGrounded();
 
         //flip sprite
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour, IDamageable
         //current velocity  = new vecotr3(horizontal input, current velocity) --> walk
         _rigid.velocity = new Vector2(move * _speed, _rigid.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.Space) || CrossPlatformInputManager.GetButtonDown("A_Btn")) && IsGrounded())
         {
             _playerAnim.Jump(true);
             Debug.Log("Jump!");
@@ -86,7 +87,7 @@ public class Player : MonoBehaviour, IDamageable
 
     void Attack()
     {
-        if(Input.GetMouseButtonDown(0) && IsGrounded() == true)
+        if(CrossPlatformInputManager.GetButtonDown("B_Btn") && IsGrounded() == true)
         {
             _playerAnim.Attack();
         }
